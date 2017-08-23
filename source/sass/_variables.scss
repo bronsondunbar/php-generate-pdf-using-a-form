@@ -1,0 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i');
+
+/* Colours */
+
+$lightBlue: #06A9E1;
+$darkBlue: #0D3758;
+$darkerBlue: #000333;
+$white: #ffffff;
+$gray: #333333;
+$lightGray: #e5e5e5;
+
+/* Shadows */
+
+$lightBlueShadow: 0 0 20px rgba(6, 169, 225, 0.6);
+
+/* Transitions */
+
+$fastTransition: all 0.3s;
+
+/* Backgrounds */
+
+$grayGradient: linear-gradient(135deg, #F1F1F2 0%, #ffffff 100%);
+
+/* Fonts */
+
+$titleFontFamily: "Montserrat", sans-serif;
+$titleFontWeight: 400;
+$titleFontColour: $lightBlue;
+	
+$bodyFontFamily: "Arial", sans-serif;
+
+/* Messages */
+
+$lightGreen: #dff0d8;
+$mediumGreen: #3c763d;
+$darkGreen: #093e09;
+
+$lightRed: #f2dede;
+$mediumRed: #a94442;
+$darkRed: #4f0a06;
+
+$lighterBlue: #d9edf7;
+$mediumBlue: #31708f;
+
+/* Screen sizes */
+
+$desktop: 1920px;
+$laptop: 1440px;
+$tabletLandscape: 1024px;
+$tabletPortrait: 768px;
+$mobileLarge: 425px;
