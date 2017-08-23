@@ -1,0 +1,69 @@
+
+/* Buttons */
+
+.btn {
+
+  margin: 5px;
+
+}
+
+.btn-lg {
+
+  font-size: 14px;
+  padding: 10px 50px;
+
+}
+
+.btn-center {
+
+  text-align: center;
+
+}
+
+.btn-default {
+
+  background: $lightBlue;
+  color: $white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid $darkerBlue;
+  transition: $fastTransition;
+
+  &:hover, &:focus {
+
+    background: $white;
+    color: $darkerBlue;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid $darkerBlue;
+    box-shadow: $lightBlueShadow;
+
+  }
+
+}
+
+.btn-primary {
+
+  background: $darkBlue;
+  color: $white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid $darkerBlue;
+  transition: $fastTransition;
+
+  &:hover, &:focus {
+
+    background: $white;
+    color: $darkerBlue;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid $darkerBlue;
+    box-shadow: $lightBlueShadow;
+
+  }
+
+}

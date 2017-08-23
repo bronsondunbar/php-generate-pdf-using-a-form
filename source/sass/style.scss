@@ -1,0 +1,167 @@
+
+@import 'bootstrap';
+@import 'font.awesome';
+@import 'font.awesome.animation';
+@import 'jquery.ui.1.12.1';
+
+@import 'variables';
+@import 'typography';
+@import 'buttons';
+@import 'messages';
+@import 'loader';
+
+body {
+
+	background: #0d3758;
+	background: $grayGradient;
+	overflow-x: hidden;
+	color: $gray;
+	padding: 60px 0 0 0;
+
+}
+
+a {
+
+	color: $lightBlue;
+	text-decoration: none;
+	transition: $fastTransition;
+	cursor: pointer;
+
+	&:hover, &:focus {
+
+		color: $darkBlue;
+		text-decoration: none;
+
+	}
+
+}
+
+
+form {
+
+	text-align: center;
+
+	.g-recaptcha {
+
+		margin: 15px 0;
+
+		div {
+			
+			margin: 0 auto;
+
+		}
+
+	}
+
+	.form-list {
+
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+
+		li {
+
+			display: inline-block;
+
+			label {
+
+				padding: 0 0 0 15px;
+
+			}
+
+		}
+
+	}
+
+	.btn {
+
+		margin: 5px 0;
+
+	}
+
+}
+
+input {
+
+	background: none;
+	border: 1px solid $darkBlue;
+	padding: 5px;
+	margin: 5px 0;
+	width: 100%;
+	text-align: center;
+
+	&:focus {
+
+		border: 1px solid $lightBlue;
+		box-shadow: $lightBlueShadow;
+
+	}
+
+}
+
+
+textarea {
+
+	background: none;
+	border: 1px solid $darkBlue;
+	padding: 5px;
+	min-height: 30vh;
+	width: 100%;
+
+	&:focus {
+
+		border: 1px solid $lightBlue;
+		box-shadow: $lightBlueShadow;
+
+	}
+
+}
+
+label {
+
+	display: block;
+	margin: 15px 0;
+	font-weight: normal;
+	text-align: center;
+
+	@media (max-width: $tabletLandscape) {
+
+		margin: 5px 0;
+
+	}
+
+}
+
+header {
+
+	text-align: center;
+
+}
+
+.brand {
+
+	display: block;
+	margin: 0 auto;
+	width: 30%;
+
+}
+
+.panel-default {
+
+	border: none;
+
+}
+
+.panel {
+
+	border-radius: 0;
+
+}
+
+#selectDate {
+
+	width: 17em;
+
+}
+

@@ -1,0 +1,85 @@
+
+/* Messages */
+
+.message {
+
+	position: fixed;
+	display: none;
+	top: 0;
+	padding: 15px;
+	width: 100%;
+	text-align: center;
+
+	p {
+
+		margin: 0;
+
+	}
+
+	.dismiss {
+
+	  position: absolute;
+	  top: 20%;
+	  right: 15px;
+	  font-size: 1.5em;
+	  text-decoration: none;
+	  transition: 0.3s;
+
+	}
+
+}
+
+.success {
+
+	@extend .message;
+
+	background: $lightGreen;
+	color: $mediumGreen;
+
+	.dismiss {
+
+  		color: $mediumGreen;
+
+		&:hover, :focus {
+
+		 	color: $darkGreen;
+
+		}
+
+	}
+
+}
+
+.error {
+
+	@extend .message;
+
+	background: $lightRed;
+	color: $mediumRed;
+
+	.dismiss {
+
+  		color: $mediumRed;
+
+  		&:hover, :focus {
+
+      		color: $darkRed;
+  		}
+
+	}
+
+}
+
+.info {
+
+	@extend .message;
+
+	background: $lighterBlue;
+	color: $mediumBlue;
+
+	.btn {
+
+		width: 10%;
+	}
+
+}

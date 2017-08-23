@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="User generated content using form">
+    <meta name="author" content="Bronson Dunbar">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/ico/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Generate PDF using a form</title>
+
+    <link href="css/style.css?v=1603" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="loader">
+      <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+      <span class="sr-only">Loading...</span>
+    </div>
+
+    <div class="message"></div>
+
+    <div class="container">
+
+      <header>
+        <h1>Generate PDF using a form</h1>
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <p>This example creates a PDF using the <a href="http://www.fpdf.org/" target="_blank">FPDF library</a> with the content from a form.</p>
+
+            <p>It also includes Google reCAPTCHA to ensure there is no spam content created.</p>
+
+            <p>The PDF can also be emailed as an attachment.</p>
+          </div>
+        </div>
+      </header>
+
+      <h2>Steps</h2>
+
+      <p>In order for the example below to work you will need to use your own Google reCAPTCHA site &amp; private keys</p>
+
+      <ol>
+        <li>Go to <a href="https://www.google.com/recaptcha/intro/">https://www.google.com/recaptcha/intro/</a></li>
+        <li>Click on the Get reCAPTCHA button</li>
+        <li>After logging in, you will need to register your site in order to get your keys.</li>
+        <li>Once you have done this, you can select your site and then click on the Keys section</li>
+        <li>This will give you both your site &amp; private keys</li>
+        <li>In index.html, you can search for SITE_KEY and replace it with your key</li>
+        <li>In pdf.php, you can search for PRIVATE_KEY and replace it with your key</li>
+        <li>Once this has been done, you can upload the files your site and test. Keep in mind you need to upload the files to the same site you added in Google reCAPTCHA</li>
+      </ol>
+
+      <h2>Example</h2>
+
+      <form name="form" id="form" method="POST" action="#">
+        <label for="name">What is your name?</label>
+        <input id="name" name="name" placeholder="John Doe" type="text">
+
+        <label for="email">What is your email address?</label>
+        <input id="email" name="email" placeholder="john@doe.com" type="email">
+
+        <label for="age">What is your date of birth?</label>
+        <input id="selectDate" name="age" placeholder="mm/dd/yy" type="text">
+
+        <label for="address">What is your address?</label>
+        <input id="address" name="address" placeholder="1234 Street, City" type="text">
+
+        <label for="before">Have you used us before?</label>
+        <select id="before" name="before">
+          <option value="No">No</option>
+          <option value="Yes">Yes</option>
+        </select>
+
+        <label for="comments">Do you have any further comments?</label>
+        <textarea id="comments" name="comments"></textarea>
+
+        <ul class="form-list">
+          <li><input id="copy" name="copy" type="checkbox" value="Yes" ></li>
+          <li><label for="copy">Email me a copy</label></li>
+        </ul>
+
+        <div class="g-recaptcha" data-sitekey="SITE_KEY"></div>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+
+        <input id="submitForm" name="submit" type="submit" class="btn btn-lg btn-default" value="Create page">
+      </form>
+    </div>
+
+    <script src="js/app.js?v=1623"></script>
+  </body>
+</html>
