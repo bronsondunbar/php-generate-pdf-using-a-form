@@ -6,6 +6,8 @@ It also includes Google reCAPTCHA to ensure there is no spam content created.
 
 The PDF can also be emailed as an attachment.
 
+Preview: http://bit.ly/2iCH8tt
+
 ## Steps
 
 In order for the example below to work you will need to use your own Google reCAPTCHA site &amp; private keys as well as your MailChimp API key and list ID
