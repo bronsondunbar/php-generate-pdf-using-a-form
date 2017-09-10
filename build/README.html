@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+<h1 id="generatepdfusingaform">Generate PDF using a form</h1>
+
+<p>This example creates a PDF using the <a href="http://www.fpdf.org/" target="_blank">FPDF library</a> with the content from a form.</p>
+
+<p>The content is 64 encoded and stored in a database as well.</p>
+
+<p>It also includes Google reCAPTCHA to ensure there is no spam content created.</p>
+
+<p>The PDF can also be emailed as an attachment.</p>
+
+<p>Preview: http://bit.ly/2iCH8tt</p>
+
+<h2 id="steps">Steps</h2>
+
+<p>In order for the example below to work you will need to use your own Google reCAPTCHA site &amp; private keys as well as your MailChimp API key and list ID</p>
+
+<ol>
+<li>Go to <a href="https://www.google.com/recaptcha/intro/">https://www.google.com/recaptcha/intro/</a></li>
+<li>Click on the Get reCAPTCHA button</li>
+<li>After logging in, you will need to register your site in order to get your keys.</li>
+<li>Once you have done this, you can select your site and then click on the Keys section</li>
+<li>This will give you both your site &amp; private keys</li>
+<li>In index.html, you can search for SITE_KEY and replace it with your key</li>
+<li>In create.php, you can search for PRIVATE_KEY and replace it with your key</li>
+<li>Once this has been done, you can upload the files your site and test. Keep in mind you need to upload the files to the same site you added in Google reCAPTCHA</li>
+<li>You will need to add your own database details in the db.php found in the includes folder in order the content to also be captured there.</li>
+</ol>
+
+</body>
+</html>
