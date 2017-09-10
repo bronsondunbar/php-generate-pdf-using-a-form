@@ -1,9 +1,8 @@
 <?php
 
+require "includes/db.php";
 require "includes/PHPMailerAutoload.php";
 require "includes/fpdf.php";
-
-/* Global */
 
 $captcha = "";
 $captchaError = "";
@@ -19,8 +18,6 @@ $rootFolder = "http://" . $_SERVER['HTTP_HOST'] . "/components/php-generate-pdf-
 $userPage = "";
 $pageMessage = "";
 $emailCopy = "";
-
-/* Get values from form */
 
 if(isset($_POST["g-recaptcha-response"])){
 
@@ -495,12 +492,22 @@ if(intval($responseKeys["success"]) !== 1) {
 
 	    }
 
-	  } else {
+	} else {
 
-	    $responseData["pageSuccess"] = "<i class='fa fa-check' aria-hidden='true'></i> Page has been created. <a href='" . $filePath . "' target='_blank'>Click here</a> to view.";
+		$responseData["pageSuccess"] = "<i class='fa fa-check' aria-hidden='true'></i> Page has been created. <a href='" . $filePath . "' target='_blank'>Click here</a> to view.";
 
-	  }
+	}
 
+  	$userName = base64_encode($_POST["name"]);
+	$userEmail = base64_encode($_POST["email"]);
+	$userAge = base64_encode($_POST["age"]);
+	$userAddress = base64_encode($_POST["address"]);
+	$userBefore = base64_encode($_POST["before"]);
+	$userComments = base64_encode($_POST["comments"]);
+	$userCopy = base64_encode($_POST["copy"]);
+
+	$sql = "INSERT INTO users SET userName='$userName', userEmail='$userEmail', userAge='$userAge', userAddress='$userAddress', userBefore='$userBefore', userComments='$userComments', userCopy='$userCopy'";
+	$result = $conn->query($sql);
 
 }
 

@@ -20,8 +20,6 @@ $("form").submit(function (event) {
       $("body").css("overflow", "hidden");
     },
 
-    /* If there are any syntax issues in our PHP script we will log them in the console */
-
     error: function (jqXHR, textStatus, errorThrown) {
       console.log(jqXHR);
       console.log(textStatus);
@@ -101,8 +99,6 @@ $("form").submit(function (event) {
           $(".message").html(data.responseJSON.pageSuccess).addClass("success").fadeIn();
         });
         grecaptcha.reset();
-
-        /* Reset all form fields after successful submission */
 
         $("#name").val("");
         $("#email").val("");
