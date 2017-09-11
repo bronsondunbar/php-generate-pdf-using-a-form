@@ -474,7 +474,7 @@ if(intval($responseKeys["success"]) !== 1) {
 
 	    $sendEmail->SMTPDebug = 3;
 
-	    $sendEmail->setFrom("bronson@bronsondunbar.com", "Submission");
+	    $sendEmail->setFrom("your@emailaddress.com", "Submission");
 	    $sendEmail->addAddress($userEmail, "Submission");
 	    $sendEmail->Subject = "Submission";
 	    $sendEmail->Body = "Please find your copy of your submission attached.";
