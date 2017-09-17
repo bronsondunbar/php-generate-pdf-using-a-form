@@ -6,6 +6,7 @@ require "includes/fpdf.php";
 
 $captcha = "";
 $captchaError = "";
+$yourEmail = "your@email.com";
 
 $userName = "";
 $userEmail = "";
@@ -474,7 +475,11 @@ if(intval($responseKeys["success"]) !== 1) {
 
 	    $sendEmail->SMTPDebug = 3;
 
+<<<<<<< HEAD
+	    $sendEmail->setFrom($yourEmail, "Submission");
+=======
 	    $sendEmail->setFrom("your@emailaddress.com", "Submission");
+>>>>>>> 9f83d471a150f563dfbe77518e0b56070147905f
 	    $sendEmail->addAddress($userEmail, "Submission");
 	    $sendEmail->Subject = "Submission";
 	    $sendEmail->Body = "Please find your copy of your submission attached.";
