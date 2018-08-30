@@ -3,67 +3,47 @@
 
 .btn {
 
-  margin: 5px;
-
-}
-
-.btn-lg {
-
-  font-size: 14px;
-  padding: 10px 50px;
+	border-radius: 0;
+	margin: 5px;
 
 }
 
 .btn-center {
 
-  text-align: center;
+	text-align: center;
 
 }
 
 .btn-default {
 
-  background: $lightBlue;
-  color: $white;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 3px solid $darkerBlue;
-  transition: $fastTransition;
+	background: $green;
+	color: $white;
+	border: 1px solid $green;
+	transition: $fastTransition;
 
-  &:hover, &:focus {
+	&:hover, &:focus {
 
-    background: $white;
-    color: $darkerBlue;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 3px solid $darkerBlue;
-    box-shadow: $lightBlueShadow;
+		background: $white;
+		color: $green;
+		border: 1px solid $green;
+		box-shadow: $lightGreenShadow;
 
-  }
+	}
 
 }
 
 .btn-primary {
 
-  background: $darkBlue;
-  color: $white;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 3px solid $darkerBlue;
-  transition: $fastTransition;
+	background: $gray;
+	color: $white;
+	border: 1px solid $gray;
 
-  &:hover, &:focus {
+	&:hover, &:focus {
 
-    background: $white;
-    color: $darkerBlue;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 3px solid $darkerBlue;
-    box-shadow: $lightBlueShadow;
+		background: $white;
+		color: $gray;
+		border: 1px solid $gray;
 
-  }
+	}
 
 }

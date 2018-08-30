@@ -8,7 +8,7 @@
     <meta name="description" content="Generate PDF using a form component">
     <meta name="author" content="Bronson Dunbar">
 
-    <title>Generate PDF using a form component</title>
+    <title>Generate PDF Using A Form</title>
 
     <link href="css/style.css?v=1603" rel="stylesheet">
 
@@ -31,10 +31,10 @@
     <div class="container">
 
       <header>
-        <h1>Generate PDF using a form</h1>
+        <h1>Generate PDF Using A Form</h1>
 
-        <div class="panel panel-default">
-          <div class="panel-body">
+        <div class="card">
+          <div class="card-body">
             <p>This example creates a PDF using the <a href="http://www.fpdf.org/" target="_blank">FPDF library</a> with the content from a form.</p>
 
             <p>The content is 64 encoded and stored in a database as well.</p>
@@ -46,58 +46,68 @@
         </div>
       </header>
 
-      <h2>Steps</h2>
+      <div class="card">
+        <div class="card-body">
+          <h2>Steps</h2>
 
-      <p>In order for the example below to work you will need to use your own Google reCAPTCHA site &amp; private keys</p>
+          <p>In order for the example below to work you will need to use your own Google reCAPTCHA site &amp; private keys</p>
 
-      <ol>
-        <li>Go to <a href="https://www.google.com/recaptcha/intro/">https://www.google.com/recaptcha/intro/</a></li>
-        <li>Click on the Get reCAPTCHA button</li>
-        <li>After logging in, you will need to register your site in order to get your keys.</li>
-        <li>Once you have done this, you can select your site and then click on the Keys section</li>
-        <li>This will give you both your site &amp; private keys</li>
-        <li>In index.html, you can search for SITE_KEY and replace it with your key</li>
-        <li>In pdf.php, you can search for PRIVATE_KEY and replace it with your key</li>
-        <li>Once this has been done, you can upload the files your site and test. Keep in mind you need to upload the files to the same site you added in Google reCAPTCHA</li>
-        <li>You will need to add your own database details in the db.php found in the includes folder in order the content to also be captured there.</li>
-      </ol>
+          <ol>
+            <li>Go to <a href="https://www.google.com/recaptcha/intro/">https://www.google.com/recaptcha/intro/</a></li>
+            <li>Click on the Get reCAPTCHA button</li>
+            <li>After logging in, you will need to register your site in order to get your keys.</li>
+            <li>Once you have done this, you can select your site and then click on the Keys section</li>
+            <li>This will give you both your site &amp; private keys</li>
+            <li>In index.html, you can search for SITE_KEY and replace it with your key</li>
+            <li>In pdf.php, you can search for PRIVATE_KEY and replace it with your key</li>
+            <li>Once this has been done, you can upload the files your site and test. Keep in mind you need to upload the files to the same site you added in Google reCAPTCHA</li>
+            <li>You will need to add your own database details in the db.php found in the includes folder in order the content to also be captured there.</li>
+          </ol>
+        </div>
+      </div>
 
-      <h2>Example</h2>
+      <div class="card">
+        <div class="card-body">
+          <h2>Example</h2>
 
-      <form name="form" id="form" method="POST" action="#">
-        <label for="name">What is your name?</label>
-        <input id="name" name="name" placeholder="John Doe" type="text">
+          <form name="form" id="form" method="POST" action="#">
+            <label for="name">What is your name?</label>
+            <input id="name" name="name" placeholder="John Doe" type="text">
 
-        <label for="email">What is your email address?</label>
-        <input id="email" name="email" placeholder="john@doe.com" type="email">
+            <label for="email">What is your email address?</label>
+            <input id="email" name="email" placeholder="john@doe.com" type="email">
 
-        <label for="age">What is your date of birth?</label>
-        <input id="selectDate" name="age" placeholder="mm/dd/yy" type="text">
+            <label for="age">What is your date of birth?</label>
+            <input id="selectDate" name="age" placeholder="mm/dd/yy" type="text">
 
-        <label for="address">What is your address?</label>
-        <input id="address" name="address" placeholder="1234 Street, City" type="text">
+            <label for="address">What is your address?</label>
+            <input id="address" name="address" placeholder="1234 Street, City" type="text">
 
-        <label for="before">Have you used us before?</label>
-        <select id="before" name="before">
-          <option value="No">No</option>
-          <option value="Yes">Yes</option>
-        </select>
+            <label for="before">Have you used us before?</label>
+            <select id="before" name="before">
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
 
-        <label for="comments">Do you have any further comments?</label>
-        <textarea id="comments" name="comments"></textarea>
+            <label for="comments">Do you have any further comments?</label>
+            <textarea id="comments" name="comments"></textarea>
 
-        <ul class="form-list">
-          <li><input id="copy" name="copy" type="checkbox" value="Yes" ></li>
-          <li><label for="copy">Email me a copy</label></li>
-        </ul>
+            <ul class="form-list">
+              <li><input id="copy" name="copy" type="checkbox" value="Yes" ></li>
+              <li><label for="copy">Email me a copy</label></li>
+            </ul>
 
-        <div class="g-recaptcha" data-sitekey="SITE_KEY"></div>
-        <script src='https://www.google.com/recaptcha/api.js'></script>
+            <div class="g-recaptcha" data-sitekey="SITE_KEY"></div>
+            <script src='https://www.google.com/recaptcha/api.js'></script>
 
-        <input id="submitForm" name="submit" type="submit" class="btn btn-lg btn-default" value="Create page">
-      </form>
+            <button id="submitForm" name="submit" type="submit" class="btn btn-default">Generate</button>
+          </form>
+        </div>
+      </div>
+
     </div>
 
+    <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
     <script src="js/app.js?v=1623"></script>
   </body>
 </html>

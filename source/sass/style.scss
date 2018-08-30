@@ -1,41 +1,40 @@
 
 @import 'bootstrap';
-@import 'font.awesome';
-@import 'font.awesome.animation';
 @import 'jquery.ui.1.12.1';
 
 @import 'variables';
 @import 'typography';
-@import 'buttons';
-@import 'messages';
 @import 'loader';
+@import 'buttons';
 
 body {
 
-	background: #0d3758;
-	background: $grayGradient;
-	overflow-x: hidden;
-	color: $gray;
+	background: $lightGray;
+	min-height: 100vh;
+	margin: 0;
 	padding: 60px 0 0 0;
+	overflow-x: hidden;
 
 }
 
 a {
 
-	color: $lightBlue;
-	text-decoration: none;
+	color: $green;
 	transition: $fastTransition;
-	cursor: pointer;
 
 	&:hover, &:focus {
 
-		color: $darkBlue;
-		text-decoration: none;
+		color: darken($green, 40%);
 
 	}
 
 }
 
+p {
+
+	margin: 0;
+
+}
 
 form {
 
@@ -43,125 +42,57 @@ form {
 
 	.g-recaptcha {
 
-		margin: 15px 0;
-
 		div {
-			
-			margin: 0 auto;
-
+	    margin: 0 auto;
+	    padding: 0 !important;
 		}
-
-	}
-
-	.form-list {
-
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		text-align: center;
-
-		li {
-
-			display: inline-block;
-
-			label {
-
-				padding: 0 0 0 15px;
-
-			}
-
-		}
-
-	}
-
-	.btn {
-
-		margin: 5px 0;
 
 	}
 
 }
 
-input {
+input, textarea {
 
 	background: none;
-	border: 1px solid $darkBlue;
+	border: 1px solid $lightGray;
 	padding: 5px;
-	margin: 5px 0;
 	width: 100%;
 	text-align: center;
 
 	&:focus {
 
-		border: 1px solid $lightBlue;
-		box-shadow: $lightBlueShadow;
+		border: 1px solid $green;
+		box-shadow: $lightGreenShadow;
 
 	}
 
 }
 
-
-textarea {
-
-	background: none;
-	border: 1px solid $darkBlue;
-	padding: 5px;
-	min-height: 30vh;
-	width: 100%;
-
-	&:focus {
-
-		border: 1px solid $lightBlue;
-		box-shadow: $lightBlueShadow;
-
-	}
-
-}
-
-label {
-
-	display: block;
-	margin: 15px 0;
-	font-weight: normal;
-	text-align: center;
-
-	@media (max-width: $tabletLandscape) {
-
-		margin: 5px 0;
-
-	}
-
-}
-
-header {
-
-	text-align: center;
-
-}
-
-.brand {
-
-	display: block;
-	margin: 0 auto;
-	width: 30%;
-
-}
-
-.panel-default {
+.card {
 
 	border: none;
+	margin: 0 0 15px 0;
 
 }
 
-.panel {
+.input-group-text {
 
-	border-radius: 0;
-
-}
-
-#selectDate {
-
-	width: 17em;
+	background: $green;
+	border: none;
+	color: $white;
 
 }
 
+.form-list {
+
+	list-style-type: none;
+	margin: 15px 0;
+	padding: 0;
+
+	li {
+
+		display: inline-block;
+
+	}
+
+}

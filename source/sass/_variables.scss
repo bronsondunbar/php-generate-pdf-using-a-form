@@ -1,34 +1,29 @@
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i');
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+$titleFontFamily: "Anton", sans-serif;
+$titleFontWeight: 400;
+	
+$bodyFontFamily: "Arial", sans-serif;
 
 /* Colours */
 
-$lightBlue: #06A9E1;
-$darkBlue: #0D3758;
-$darkerBlue: #000333;
 $white: #ffffff;
 $gray: #333333;
-$lightGray: #e5e5e5;
+$lightGray: #dddddd;
+$green: #3ba30d;
+$purple: #560987;
 
 /* Shadows */
 
-$lightBlueShadow: 0 0 20px rgba(6, 169, 225, 0.6);
+$lightGreenShadow: 0 0 20px rgba(59, 163, 13, 0.6);
+$blackShadow: -12px 0px 23px -14px rgba(0, 0, 0, 0.31);
 
 /* Transitions */
 
 $fastTransition: all 0.3s;
-
-/* Backgrounds */
-
-$grayGradient: linear-gradient(135deg, #F1F1F2 0%, #ffffff 100%);
-
-/* Fonts */
-
-$titleFontFamily: "Montserrat", sans-serif;
-$titleFontWeight: 400;
-$titleFontColour: $lightBlue;
-	
-$bodyFontFamily: "Arial", sans-serif;
 
 /* Messages */
 
@@ -49,4 +44,5 @@ $desktop: 1920px;
 $laptop: 1440px;
 $tabletLandscape: 1024px;
 $tabletPortrait: 768px;
-$mobileLarge: 425px;
+$mobileLargePortrait: 425px;
+$mobileLargeLandscape: 736px;

@@ -5,19 +5,109 @@ h1, h2, h3, h4 {
 
 	font-family: $titleFontFamily;
 	font-weight: $titleFontWeight;
-	color: $titleFontColour;
+	text-transform: uppercase;
 	text-align: center;
+	letter-spacing: 1px;
 
 }
 
 h1 {
 
-	font-size: 48px;
+	font-size: 4em;
+	line-height: 1.3em;
+
+	span {
+
+		color: $green;
+
+	}
+
+	.fa {
+
+		font-size: 1.5em;
+		color: $green;
+		display: block;
+		clear: both;
+
+	}
+
+	@media screen and (max-width: $mobileLargePortrait) {
+
+		font-size: 3em;
+
+	}
+
+}
+
+h2 {
+
+	span {
+
+		color: $green;
+
+	}
+
+	.fa {
+
+		font-size: 1.5em;
+		color: $green;
+		display: block;
+		clear: both;
+
+	}
+
+}
+
+h3 {
+
+	span {
+
+		color: $green;
+
+	}
+
+	.fa {
+
+		font-size: 1.5em;
+		color: $green;
+		display: block;
+		clear: both;
+
+	}
+
+}
+
+h4 {
+
+	span {
+
+		color: $green;
+
+	}
+
+	.fa {
+
+		font-size: 1.5em;
+		color: $green;
+		display: block;
+		clear: both;
+
+	}
 
 }
 
 body {
 
 	font-family: $bodyFontFamily;
+
+}
+
+figure {
+
+	figcaption {
+
+		font-weight: 500;
+
+	}
 
 }
