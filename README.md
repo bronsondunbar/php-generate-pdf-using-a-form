@@ -28,7 +28,7 @@ In order for the example below to work you will need to use your own Google reCA
 
 MIT License
 
-Copyright (c) 2017 Bronson Dunbar www.bronsondunbar.com
+Copyright (c) 2020 Bronson Dunbar www.bronsondunbar.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
